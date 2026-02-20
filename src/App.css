@@ -1,0 +1,312 @@
+/* style general */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgb(231, 231, 231);
+  color: #333;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #34495e;
+  font-weight: 600;
+}
+
+/* formulaire */
+
+.form-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.checkbox-label {
+  display: flex !important;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f0f0f0;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+
+.checkbox-label:hover {
+  background: #e0e0e0;
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: #c8470b;
+  width: 16px;
+  height: 16px;
+}
+
+.form-group input[type="number"] {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  font-size: 1rem;
+  font-family: "Outfit", sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input[type="number"]:focus {
+  border-color: #c8470b;
+}
+
+.erreur {
+  color: #c0392b;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(192, 57, 43, 0.08);
+  border-radius: 6px;
+  border-left: 3px solid #c0392b;
+}
+
+.info {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 2rem;
+}
+
+/* tableau */
+
+.tableau-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background: #c8470b;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+thead th:first-child {
+  border-radius: 6px 0 0 0;
+}
+
+thead th:last-child {
+  border-radius: 0 6px 0 0;
+}
+
+tbody td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+tbody tr:hover {
+  background: #f5f5f5;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.poids-cell {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* bouton export csv */
+.btn-export {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  background: #c8470b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-export:hover {
+  background: #c8470b;
+}
+
+/* responsive tablette */
+@media (max-width: 768px) {
+  .app {
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  .form-container {
+    padding: 1.2rem;
+  }
+
+  /* checkboxes en 2 colonnes */
+  .checkboxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .form-group input[type="number"] {
+    max-width: 180px;
+  }
+
+  .tableau-container {
+    padding: 1rem;
+  }
+
+  thead th {
+    padding: 0.6rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  tbody td {
+    padding: 0.6rem 0.7rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* responsive telephone */
+@media (max-width: 480px) {
+  .app {
+    padding: 1rem 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .form-container {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  /* checkboxes en colone sur tel */
+  .checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .checkbox-label {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.6rem;
+  }
+
+  .form-group input[type="number"] {
+    max-width: 100%;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  .tableau-container {
+    padding: 0.7rem;
+    border-radius: 8px;
+  }
+
+  /* scroll horizontal si ca depase */
+  table {
+    font-size: 0.75rem;
+    min-width: 400px;
+  }
+
+  thead th {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  tbody td {
+    padding: 0.45rem 0.4rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .erreur {
+    font-size: 0.8rem;
+  }
+
+  .info {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+}

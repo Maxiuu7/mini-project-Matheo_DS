@@ -1,0 +1,6 @@
+/* reset de base, le reste est dans App.css */
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
