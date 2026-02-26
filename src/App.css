@@ -1,5 +1,3 @@
-/* style general */
-
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
 
 * {
@@ -10,9 +8,6 @@
 
 body {
   font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
   background-color: rgb(231, 231, 231);
   color: #333;
   min-height: 100vh;
@@ -21,19 +16,19 @@ body {
 .app {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 30px 15px;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 25px;
   font-size: 1.8rem;
   color: #2c3e50;
   font-weight: 700;
 }
 
 h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 12px;
   font-size: 1.3rem;
   color: #34495e;
   font-weight: 600;
@@ -42,20 +37,20 @@ h2 {
 /* formulaire */
 
 .form-container {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 5px;
   font-weight: 600;
   color: #555;
   font-size: 0.95rem;
@@ -64,44 +59,34 @@ h2 {
 .checkboxes {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 8px;
 }
 
 .checkbox-label {
   display: flex !important;
   align-items: center;
-  gap: 0.4rem;
+  gap: 5px;
   background: #f0f0f0;
-  padding: 0.5rem 0.8rem;
-  border-radius: 6px;
+  padding: 6px 10px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.2s;
   border: 1px solid #ddd;
   font-size: 0.9rem;
 }
 
 .checkbox-label:hover {
-  background: #e0e0e0;
-}
-
-.checkbox-label input[type="checkbox"] {
-  accent-color: #c8470b;
-  width: 16px;
-  height: 16px;
+  background: #e4e4e4;
 }
 
 .form-group input[type="number"] {
   width: 100%;
   max-width: 200px;
-  padding: 0.5rem 0.8rem;
-  border-radius: 6px;
+  padding: 6px 10px;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  background: #fff;
-  color: #333;
   font-size: 1rem;
   font-family: "Outfit", sans-serif;
   outline: none;
-  transition: border-color 0.2s;
 }
 
 .form-group input[type="number"]:focus {
@@ -111,11 +96,10 @@ h2 {
 .erreur {
   color: #c0392b;
   font-size: 0.9rem;
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  background: rgba(192, 57, 43, 0.08);
-  border-radius: 6px;
-  border-left: 3px solid #c0392b;
+  margin-top: 8px;
+  padding: 8px;
+  background: #fdecea;
+  border-radius: 5px;
 }
 
 .info {
@@ -128,10 +112,10 @@ h2 {
 /* tableau */
 
 .tableau-container {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   overflow-x: auto;
 }
 
@@ -142,23 +126,15 @@ table {
 
 thead th {
   background: #c8470b;
-  color: #fff;
-  padding: 0.8rem 1rem;
+  color: white;
+  padding: 10px 12px;
   text-align: left;
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-thead th:first-child {
-  border-radius: 6px 0 0 0;
-}
-
-thead th:last-child {
-  border-radius: 0 6px 0 0;
-}
-
 tbody td {
-  padding: 0.7rem 1rem;
+  padding: 8px 12px;
   border-bottom: 1px solid #eee;
   font-size: 0.9rem;
 }
@@ -176,21 +152,21 @@ tbody tr:last-child td {
   color: #2c3e50;
 }
 
-/* bouton export csv */
+/* bouton export */
 .btn-export {
-  margin-top: 1rem;
-  padding: 0.5rem 1.2rem;
+  margin-top: 12px;
+  padding: 8px 16px;
   background: #c8470b;
-  color: #fff;
+  color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   font-family: "Outfit", sans-serif;
   font-size: 0.9rem;
   cursor: pointer;
 }
 
 .btn-export:hover {
-  background: #c8470b;
+  background: #a83a09;
 }
 
 /* responsive tablette */
@@ -212,7 +188,6 @@ tbody tr:last-child td {
     padding: 1.2rem;
   }
 
-  /* checkboxes en 2 colonnes */
   .checkboxes {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -258,7 +233,6 @@ tbody tr:last-child td {
     border-radius: 8px;
   }
 
-  /* checkboxes en colone sur tel */
   .checkboxes {
     display: flex;
     flex-direction: column;
@@ -283,7 +257,6 @@ tbody tr:last-child td {
     border-radius: 8px;
   }
 
-  /* scroll horizontal si ca depase */
   table {
     font-size: 0.75rem;
     min-width: 400px;
